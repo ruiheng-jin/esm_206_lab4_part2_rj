@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 Attach packages
-```{r eval=FALSE, include=FALSE}
+```{r eval=TRUE, include=FALSE}
 library(tidyverse)
 library(plotly)
 library(DT)
@@ -19,6 +19,7 @@ library(DT)
 
 Make an interactive graph of iris data
 ```{r}
+
 iris_graph <- ggplot(iris, aes(x = Petal.Width,
                                y = Petal.Length)) +
   geom_point(aes(size = Sepal.Width,
@@ -35,6 +36,12 @@ ggplotly(iris_graph)
 ```
 
 
+### now ake int table with DT
+```{r}
+
+datatable(msleep)
+
+```
 
 
 
